@@ -1,0 +1,30 @@
+.about {
+  width: 18rem;
+  height: fit-content;
+  background-color: $white;
+  margin: 1rem 0;
+  margin-right: 1rem;
+  border: 1px solid $borderColor;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: $primay-box-shadow;
+
+  div {
+    margin-bottom: 0.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    opacity: 0.8;
+    margin-bottom: 0.4rem;
+    @include mobile {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+  }
+  p {
+    @include mobile {
+      font-size: 0.9rem;
+    }
+  }
+}

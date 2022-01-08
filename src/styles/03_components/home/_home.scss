@@ -1,0 +1,21 @@
+.home {
+  position: relative;
+  .home__sideNav-wrapper {
+    width: 25%;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    @include mobile {
+      display: none;
+    }
+  }
+  .home__feed {
+    margin-left: 25%;
+    // border: 2px solid red;
+    @include mobile {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+

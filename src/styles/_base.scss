@@ -1,0 +1,99 @@
+//
+// BASE STYLING ---------
+//
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: $bodyFont;
+  height: 100%;
+}
+
+body {
+  font-family: $bodyFont;
+  background-color: $bgColor;
+  font-size: 1rem;
+  position: relative;
+  color: $textColor;
+  font-weight: 500;
+  height: fit-content;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingFont;
+  color: $textColor;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor;
+  &:hover {
+    color: $textColor;
+  }
+}
+
+p {
+  margin: 0;
+}
+label,
+input {
+  font-family: $bodyFont;
+}
+button {
+  outline: none;
+  border: none;
+}
+.back-to-top {
+  height: 48px;
+  width: 48px;
+  background-color: $accentColor;
+  color: $white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  span {
+    margin: 0 1px;
+  }
+}
+.anticon {
+  font-size: 1rem;
+}
+
+.ant-modal-body {
+  padding: 0;
+}
+.ant-drawer-body{
+  padding: 0;
+}
+.ant-image-mask {
+  border-radius: 0.4rem;
+}
+
+.error-text {
+  color: $red;
+  font-size: 0.9rem;
+}

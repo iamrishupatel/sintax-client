@@ -1,0 +1,32 @@
+.sidenav {
+  height: 100%;
+  // border: 2px dashed royalblue;
+}
+.sidenav__link {
+  width: 180px;
+  padding: 0.6rem 0.6rem;
+  margin: 0.4rem 0;
+  border-radius: 6px;
+  color: $lightTextColor;
+  span {
+    margin: 0 6px;
+  }
+  &:hover {
+    color: $textColor;
+  }
+}
+
+.sidenav__link.active {
+  background-color: $accentColor;
+  color: #f2f2f2;
+  box-shadow: $blue-box-shadow;
+  &:hover {
+    color: #f2f2f2;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sidenav__link {
+    width: 120px;
+  }
+}

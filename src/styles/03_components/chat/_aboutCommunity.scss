@@ -1,0 +1,27 @@
+.about-community {
+  margin-top: 2.6rem;
+
+  .description {
+    margin-top: 1.4rem;
+    margin-left: 1rem;
+    p {
+      margin: 0.4rem 1.6rem 0 0.6rem;
+      text-align: justify;
+    }
+  }
+}
+.about-community__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  h2 {
+    margin-top: 1rem;
+  }
+}

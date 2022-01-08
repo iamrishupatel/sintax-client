@@ -1,0 +1,39 @@
+.community {
+  padding-left: 2rem;
+  height: 4rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+  @include mobile {
+    padding-left: 1rem;
+  }
+  .community-name {
+    margin-left: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    @include mobile {
+      height: 2.6rem;
+      width: 2.6rem;
+    }
+    
+  }
+}
+
+.community.active {
+  background-color: $accentColor;
+  color: $white;
+  h4 {
+    color: $white;
+  }
+}

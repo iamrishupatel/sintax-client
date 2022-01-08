@@ -1,0 +1,19 @@
+.layout {
+  position: relative;
+  main {
+    margin-top: 4rem;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    // border: 8px dashed blue;
+    @include mobile {
+      margin: 0;
+      width: 100vw;
+      
+
+    }
+  }
+
+
+}
+

@@ -1,0 +1,50 @@
+.communities-panel {
+  width: 30%;
+  border-right: 1px solid $borderColor;
+  @include mobile {
+
+    position: absolute;
+    width: 100%;
+    background: $primaryColor;
+    inset: 0;
+    z-index: 10;
+    transition: 0.4s;
+    transform: translateX(-110%);
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $borderColor;
+    height: 3.4rem;
+    h2 {
+      padding-left: 1rem;
+      @include mobile {
+        font-size: 1.2rem;
+        padding-left: 0.6rem;
+      }
+    }
+    .anticon {
+      display: none;
+      @include mobile {
+        display: block;
+        font-size: 1.2rem;
+        padding: 0.6rem;
+      }
+    }
+  }
+}
+
+.communities-panel-list {
+  height: calc(100% - 3.4rem);
+  @extend .scroll-y;
+  @include mobile {
+  }
+}
+
+
+
+.communities-panel.active {
+  @include mobile {
+    transform: translateX(0%);
+  }
+}

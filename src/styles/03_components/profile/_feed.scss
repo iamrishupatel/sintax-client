@@ -1,0 +1,20 @@
+.profile-feed {
+  @include mobile {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .profile-feed {
+    justify-content: center;
+  }
+  .feed__about {
+    display: none;
+  }
+}
+
+.empty-posts {
+  @include mobile {
+    width: 100%;
+  }
+  
+}

@@ -1,0 +1,35 @@
+.top-tab-bar {
+  display: none;
+  @include mobile {
+    background-color: $primaryColor;
+    height: 2.4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+.top-tab-bar__item {
+  position: relative;
+  .icon {
+    font-size: 1.2rem;
+    color: $gray-900;
+  }
+}
+
+.top-tab-bar__item.active {
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -0.4rem;
+    left: 0;
+    background-color: $accentColor;
+    height: 2px;
+    width: 100%;
+  }
+  .icon {
+    font-size: 1.2rem;
+    color: $accentColor;
+  }
+}

@@ -1,0 +1,25 @@
+.userAvatar {
+  background: lighten($color: $accentColor, $amount: 30);
+  // background-color : $accentColor;
+  text-transform: capitalize;
+  padding: 0.4rem;
+  padding-right: 1rem;
+  border-radius: 36px;
+  cursor: pointer;
+  margin: 0 0.3rem;
+  .user__name {
+    margin: 0 0.4rem;
+    color: $accentColor;
+    
+  }
+  img {
+    height: 2rem;
+    width:  2rem;
+    // border: 2px solid $white;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  &:hover {
+    background: lighten($color: $accentColor, $amount: 26);
+  }
+}

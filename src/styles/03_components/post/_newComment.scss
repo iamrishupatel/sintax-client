@@ -1,0 +1,55 @@
+// NEW COMMENT
+
+.new-comment {
+  // border: 2px solid $gray-900;
+  border-radius: 4px;
+  position: relative;
+  height: 4.6rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background: $primaryColor;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  @include mobile {
+    padding: 0.7rem 0.6rem;
+  }
+  .input-field {
+    border: 1px solid $borderColor;
+    border-radius: 0;
+    outline: $accentColor 1px;
+    flex: 1;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+    height: 2.6rem;
+    padding: 0rem 0.8rem;
+  }
+  .input-field.is-invalid {
+    border: 1px solid $red;
+  }
+  .send {
+    border-radius: 0px 6px 6px 0;
+    background: transparent;
+    border: 1px solid $borderColor;
+    border-left: 0;
+    color: $black;
+    height: 2.6rem;
+    width: 3.2rem;
+    font-size: 1rem;
+    &:hover {
+      background-color: lighten($color: $accentColor, $amount: 8);
+      svg {
+        color: $white;
+      }
+    }
+    svg {
+      height: 1.2rem;
+      color: $accentColor;
+    }
+  }
+  .send.is-invalid {
+    border: 1px solid $red;
+    border-left: 0;
+  }
+}

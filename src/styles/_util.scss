@@ -1,0 +1,87 @@
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-spacer {
+  flex: 1;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+.pointer {
+  cursor: pointer;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+  // position: absolute;
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    @include mobile {
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-700;
+    border-radius: 3px;
+    position: absolute;
+    &:hover {
+      background: $gray-900;
+    }
+    @include mobile {
+      width: 0.2rem;
+      height: 0.2rem;
+    }
+  }
+}
+
+.scroll-x {
+  overflow-x: scroll;
+  // position: absolute;
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-700;
+    border-radius: 3px;
+    position: absolute;
+    &:hover {
+      background: $gray-900;
+    }
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+// status classes
+.error-text {
+  color: $red;
+}
+.success-text {
+  color: green;
+}

@@ -1,0 +1,137 @@
+.newPost {
+  // height: 300px;
+  // width: 400px;
+  // border: 2px solid red;
+  // background-color: wheat
+
+  form {
+    padding: 1rem;
+  }
+
+  .user {
+    // border: 2px dashed blue;
+    // margin-bottom: -1rem;
+    img {
+      height: 3rem;
+      width: 3rem;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 0.6rem;
+    }
+    .user-name {
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+    .badge {
+      background-color: $bgColor;
+      padding: 0.2rem 0;
+      width: 5rem;
+      border-radius: 0.4rem;
+      font-size: 0.7rem;
+      span {
+        margin-right: 0.2rem;
+      }
+      @include mobile {
+        padding: 0.2rem 0;
+        width: 4.2rem;
+        
+      }
+    }
+  }
+  .form-field {
+    position: relative;
+    margin: 0.5rem 0;
+    display: flex;
+    // border: 2px dashed red;
+    width: 100%;
+    button {
+      padding: 0.6rem 0rem;
+      width: 100%;
+      border: none;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      background-color: #ff6f00;
+      color: $white;
+      .icon {
+        margin-right: 0.4rem;
+      }
+    }
+    button[type="submit"] {
+      background-color: $accentColor;
+
+      &:disabled {
+        background-color: $gray-500;
+        color: $black;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .photo-preview-wrapper {
+    max-height: 15rem;
+    position: relative;
+    &:hover .photo-name {
+      display: block;
+    }
+    @include mobile {
+      max-height: 10rem;
+    }
+
+    .photo-delete,
+    .photo-name {
+      position: absolute;
+      top: 1rem;
+      z-index: 10;
+    }
+    .photo-delete {
+      right: 1rem;
+      color: #f2f2f2;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+    .photo-name {
+      left: 1rem;
+      background-color: $gray-500;
+      font-size: 0.8rem;
+      padding: 0.2rem 1rem;
+      border-radius: 0.4rem;
+      font-weight: 500;
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+  .photo-preview {
+    // border: 2px dashed blue;
+    width: 100%;
+    // height: 5rem;
+    object-fit: cover;
+    border-radius: 0.6rem;
+  }
+
+  textarea {
+    width: 100%;
+    height: 8rem;
+    padding: 0.6rem 0;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+  h2 {
+    font-weight: 600;
+  }
+}
+
+.newPost__heading {
+  // background-color: turquoise;
+  width: 100%;
+  border-bottom: 1px solid $borderColor;
+  padding: 0.5rem 0;
+  // font-weight: 00;
+  // font-size: 1.2rem;
+}

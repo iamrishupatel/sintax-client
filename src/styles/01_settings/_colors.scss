@@ -1,0 +1,34 @@
+$primaryColor: #fff;
+$accentColor: #7869d7;
+
+$blue: #5a20cb;
+$red: #e21717;
+$black : #000;
+$green : rgb(40, 151, 40);
+
+$bgColor: #eeeeee;
+
+$textColor: #1e1e1e;
+$lightTextColor: lighten(
+  $color: $textColor,
+  $amount: 50%,
+);
+
+$borderColor: #cad5e2;
+
+$white: #fff;
+
+$gray-900: #7e7e7e;
+$gray-700: #d3d3d3;
+$gray-500: #dcdcdc;
+$gray-300: #eeeeee;
+
+$disabled-btn : #dcdcdc;
+
+$blue-box-shadow : 2px 4px 50px lighten($color: $accentColor, $amount: 10);
+
+$primay-box-shadow :0px 0px 10px rgba(0, 0, 0, 0.1);
+$primary-box-shadow :0px 0px 10px rgba(0, 0, 0, 0.1);
+
+// FOR DARK THEME uncomment following
+
