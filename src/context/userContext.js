@@ -44,13 +44,7 @@ const UserContextProvider = props => {
       await feathersClient.service("users").create(credentials);
       signInWithEmailAndPassword(credentials);
     } catch (error) {
-      const { errors } = error;
-      errors.forEach(error => {
-        notification.error({
-          title: "Error",
-          description: error.message,
-        });
-      });
+        console.log(error)
     } finally {
       callback();
     }
