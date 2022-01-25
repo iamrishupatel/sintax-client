@@ -39,10 +39,9 @@ const CreateComment = ({ type, parentId, onSuccess }) => {
     }
     setIsLoading(true);
     createComment(comment)
-      .then(res => {
+      .then(() => {
         setComment(prevState => ({ ...prevState, body: "" }));
         antMessage.success(`${type} added successfully!`);
-        onSuccess();
       })
       .catch(error => {
         console.log(error);
@@ -54,6 +53,7 @@ const CreateComment = ({ type, parentId, onSuccess }) => {
       })
       .finally(() => {
         setIsLoading(false);
+        onSuccess();
       });
   };
 

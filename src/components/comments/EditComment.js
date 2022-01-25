@@ -1,6 +1,7 @@
 import { useState, useContext, Fragment } from "react";
 import { PostContext } from "../../context/postContext";
 import { LoadingOutlined } from "@ant-design/icons";
+import { message } from "antd";
 
 const EditComment = ({ body, id, onSuccess }) => {
   const { updateComment } = useContext(PostContext);
@@ -32,9 +33,7 @@ const EditComment = ({ body, id, onSuccess }) => {
     }
     setIsLoading(true);
     updateComment(id, comment)
-      .then(res => {
-        onSuccess();
-      })
+      .then(() => message.success("Comment edited."))
       .catch(error => {
         setError({
           status: true,
@@ -43,6 +42,7 @@ const EditComment = ({ body, id, onSuccess }) => {
       })
       .finally(() => {
         setIsLoading(false);
+        onSuccess();
       });
   };
 

@@ -9,9 +9,10 @@ import Comment from "../../components/comments/Comment";
 import PostSkeleton from "../../components/post/PostSkeleton";
 import CreateComment from "../../components/comments/CreateComment";
 import feathersClient from "../../feathers";
+import Comments from "../../components/comments/Comments";
 
 const PostPage = () => {
-  useDocumentTitle("Post | Sintax")
+  useDocumentTitle("Post | Sintax");
   let { postId } = useParams();
   const { getPostById } = useContext(PostContext);
 
@@ -79,7 +80,7 @@ const PostPage = () => {
   if (error) {
     return <div>ERROR IN FETCHING POST</div>;
   }
-  
+
   if (post._id) {
     return (
       <div>
@@ -89,16 +90,7 @@ const PostPage = () => {
           <CreateComment parentId={post._id} type={"comment"} />
         </div>
 
-        {post.comments &&
-          post.comments.length > 0 &&
-          post.comments.map(
-            comment =>
-              comment && (
-                <div className="comments" key={comment._id}>
-                  <Comment comment={comment} />
-                </div>
-              )
-          )}
+        <Comments data={post.comments} />
       </div>
     );
   }
