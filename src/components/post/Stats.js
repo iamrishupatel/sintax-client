@@ -1,11 +1,7 @@
-import { useState, useContext, useEffect, useRef } from "react";
+import { useState, useContext, useEffect, useRef, Fragment } from "react";
 import { PostContext } from "../../context/postContext";
 import { UserContext } from "../../context/userContext";
-import {
-  MessageOutlined,
-  HeartOutlined,
-  HeartFilled,
-} from "@ant-design/icons";
+import { MessageOutlined, HeartOutlined, HeartFilled } from "@ant-design/icons";
 import likeSound from "../../assets/like.mp3";
 import LikeGroup from "./LikeGroup";
 import { Link } from "react-router-dom";
@@ -55,7 +51,10 @@ const Stats = ({ post }) => {
 
       <div className="d-flex">
         <Link to={`/post/${post._id}`} className="d-flex align-center">
-          <MessageOutlined className="icon" />
+          <Fragment>
+            <MessageOutlined className="icon" />
+            <span className="data">{post.comments.length}</span>
+          </Fragment>
         </Link>
       </div>
 
