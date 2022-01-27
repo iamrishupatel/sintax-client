@@ -1,11 +1,10 @@
 .settings {
-  padding:  1rem;
+  padding: 1rem;
 }
 
 .settings__form {
   display: flex;
   flex-direction: column;
-  // border: 2px dashed blue;
 
   .form-field {
     width: 100%;
@@ -49,8 +48,7 @@
   background-color: $accentColor;
   color: $white;
   border-radius: 6px;
-  padding: 0.6rem 1.6rem;
-  outline: none;
+  padding: 0.4rem 1.6rem;
   border: none;
   font-family: $headingFont;
   font-weight: 500;
@@ -64,3 +62,22 @@
   }
 }
 
+.settings__reset {
+  @extend .settings__submit;
+  color: $black;
+  background: transparent;
+  // border: 2px solid $accentColor;
+  padding: 0.3rem 2rem;
+  box-shadow: 0px 0px 0px 2px $accentColor inset;
+  &:hover {
+    transform: translateY(0);
+    background: lighten($color: $accentColor, $amount: 30);
+  }
+  &:disabled {
+    background: $disabled-btn;
+    color: $gray-900;
+    border-color: $disabled-btn;
+    cursor: default;
+    box-shadow: 0px 0px 0px 2px $disabled-btn inset;
+  }
+}
