@@ -47,8 +47,7 @@ const PostContextProvider = props => {
           setPosts(prevPosts =>
             prevPosts.map(post => {
               if (post._id !== newPost._id) return post;
-              post.likes = newPost.likes;
-              return post;
+              return newPost;
             })
           );
       });
