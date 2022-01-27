@@ -62,6 +62,7 @@ const Navigation = () => {
         visible={isDrawerVisible}
         width={"30rem"}
         closeIcon={<CloseCircleOutlined style={{ fontSize: "1.2rem" }} />}
+        destroyOnClose
       >
         <Settings/>
       </Drawer>

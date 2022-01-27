@@ -33,6 +33,7 @@ const MenuPanel = () => {
         visible={isDrawerVisible}
         height={"40rem"}
         closeIcon={<CloseCircleOutlined style={{ transform: "scale(1.4)" }} />}
+        destroyOnClose
       >
         <Settings />
       </Drawer>
