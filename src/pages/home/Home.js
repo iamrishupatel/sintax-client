@@ -11,6 +11,21 @@ const Home = () => {
       </aside>
 
       <section className="home__feed">
+        <div className="home__feed-banner">
+          <p>
+            Hello Everyone welcome to SINTAX. I hope that you are here to test
+            out his app but please keep following things in mind:
+          </p>
+          <ul>
+            <li>
+              Instead of posting random words and things to test out this app
+              use some good images or post some quotes or anything that is
+              meaningfull avoid using lorem ipsum and random words.
+            </li>
+            <li>Please be civic</li>
+            <li>DO NOT share any personal information</li>
+          </ul>
+        </div>
         <Outlet />
       </section>
     </div>
