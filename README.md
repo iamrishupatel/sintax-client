@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Welcome to Sintax
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![SC2 Video](https://res.cloudinary.com/dvhtmxijl/image/upload/v1643431571/sintax/assets/Frame_1_qqnj7c.png)](https://youtu.be/SeYzVu_Qvn4)
 
-## Available Scripts
+[Sintax](https://sintax.rishupatel.in) is a MERN stack social media web application inspired from the traditional social media platforms.
 
-In the project directory, you can run:
+## Useful Links
 
-### `npm start`
+- [Preview App](https://sintax.rishupatel.in)
+- [Backend Codebase](https://github.com/iamrishupatel/sintax-backend)
+- [YouTube Demo](https://youtu.be/SeYzVu_Qvn)
+- Share your feedback on [twitter](https://twitter.com/iamrishupatel)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Sintax is built with the following tech
 
-### `npm test`
+- [React JS](https://reactjs.org/) for client
+- [FeathersJS](https://feathersjs.com/) on server
+- [MongoDB](https://www.mongodb.com/) as a database
+- [Cloudinary](https://cloudinary.com/) for storing images
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<hr>
+If you find any bug please create an issue or report them however you like
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feature i might add in the future(**_no commitment_**)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ability to send images in chat as well
+- gif support in comments and chat
+- one on one chat with users
+- private communities
+- ability to search users
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Gallery
 
-### `npm run eject`
+![sintax-profilepage](https://res.cloudinary.com/dvhtmxijl/image/upload/v1643460439/sintax/assets/sintax-profile_hj5g6e.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![sintax-newpost](https://res.cloudinary.com/dvhtmxijl/image/upload/v1643460441/sintax/assets/sintax-create-post_fytrru.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![sintax-chat](https://res.cloudinary.com/dvhtmxijl/image/upload/v1643458692/sintax/assets/sintax-chat_wgn5dn.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![sintax-mobile-homepage](https://res.cloudinary.com/dvhtmxijl/image/upload/c_fit,h_720,w_330/v1643458356/sintax/assets/sintax-mobile-home_aoh7zw.jpg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![sinatx-mobile-comments](https://res.cloudinary.com/dvhtmxijl/image/upload/c_fit,h_720,w_330/v1643458356/sintax/assets/sintax-mobile-comments_dvxqwx.jpg)
 
-## Learn More
+![sinatx-mobile-profile-page](https://res.cloudinary.com/dvhtmxijl/image/upload/c_fit,h_720,w_330/v1643458355/sintax/assets/sintax-mobile-profile_bvttc6.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
