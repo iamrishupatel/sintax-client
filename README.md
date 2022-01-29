@@ -8,7 +8,7 @@
 
 - [Preview App](https://sintax.rishupatel.in)
 - [Backend Codebase](https://github.com/iamrishupatel/sintax-backend)
-- [YouTube Demo](https://youtu.be/SeYzVu_Qvn)
+- [YouTube Demo](https://youtu.be/SeYzVu_Qvn4)
 - Share your feedback on [twitter](https://twitter.com/iamrishupatel)
 
 ## Tech Used
