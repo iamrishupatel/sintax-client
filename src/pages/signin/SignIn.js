@@ -18,6 +18,7 @@ const SignIn = () => {
   // states
   const [isPasswordVisible, setIsPasswordVisible] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [isGuestLoginLoading, setIsGuestLoginLoading] = useState(false);
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -52,6 +53,21 @@ const SignIn = () => {
     }));
   };
 
+  const guestAccountLogin = () => {
+    setIsGuestLoginLoading(true);
+    signInWithEmailAndPassword({
+      email: "guest@example.com",
+      password: "12345678",
+    })
+      .then(() => {})
+      .catch(error => {
+        console.log(error);
+      })
+      .finally(() => {
+        setIsGuestLoginLoading(false);
+      });
+  };
+
   if (user && user._id) return <Navigate to="/" />;
   return (
     <div className="auth-form d-flex-center">
@@ -76,7 +92,7 @@ const SignIn = () => {
             </div>
           </div>
           <div className="form-field">
-            <label htmlFor="password">Passowrd</label>
+            <label htmlFor="password">Password</label>
             <div className="input-field">
               <input
                 type={isPasswordVisible ? "text" : "password"}
@@ -101,8 +117,26 @@ const SignIn = () => {
             </div>
           </div>
           <div className="form-field">
-            <button type="submit">
+            <button type="submit" disabled={isLoading || isGuestLoginLoading}>
               {isLoading ? <LoadingOutlined /> : "Sign In"}
+            </button>
+          </div>
+          <div className="form-field-divider">
+            <span>OR</span>
+          </div>
+
+          <div className="form-field">
+            <button
+              className="gray"
+              type="button"
+              onClick={guestAccountLogin}
+              disabled={isGuestLoginLoading || isLoading}
+            >
+              {isGuestLoginLoading ? (
+                <LoadingOutlined />
+              ) : (
+                "Continue as a guest"
+              )}
             </button>
           </div>
         </form>

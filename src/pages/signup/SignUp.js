@@ -12,9 +12,11 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const SignUp = () => {
   useDocumentTitle("Sign Up | Sintax");
-  const { signUpWithEmailAndPassword, user } = useContext(UserContext);
+  const { signUpWithEmailAndPassword, signInWithEmailAndPassword, user } =
+    useContext(UserContext);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isGuestLoginLoading, setIsGuestLoginLoading] = useState(false);
 
   const [credentials, setCredentials] = useState({
     firstName: "",
@@ -36,6 +38,21 @@ const SignUp = () => {
     signUpWithEmailAndPassword(credentials, () => {
       setIsLoading(false);
     });
+  };
+
+  const guestAccountLogin = () => {
+    setIsGuestLoginLoading(true);
+    signInWithEmailAndPassword({
+      email: "guest@example.com",
+      password: "12345678",
+    })
+      .then(() => {})
+      .catch(error => {
+        console.log(error);
+      })
+      .finally(() => {
+        setIsGuestLoginLoading(false);
+      });
   };
 
   if (user && user._id) return <Navigate to="/" />;
@@ -84,7 +101,7 @@ const SignUp = () => {
             </div>
           </div>
           <div className="form-field">
-            <label htmlFor="password">Passowrd</label>
+            <label htmlFor="password">Password</label>
             <div className="input-field">
               <input
                 type={isPasswordVisible ? "text" : "password"}
@@ -107,15 +124,35 @@ const SignUp = () => {
               )}
             </div>
           </div>
+
           <div className="form-field">
-            <button type="submit">
+            <button type="submit" disabled={isLoading || isGuestLoginLoading}>
               {isLoading ? <LoadingOutlined /> : "Sign Up"}
+            </button>
+          </div>
+
+          <div className="form-field-divider">
+            <span>OR</span>
+          </div>
+
+          <div className="form-field">
+            <button
+              className="gray"
+              type="button"
+              onClick={guestAccountLogin}
+              disabled={isGuestLoginLoading || isLoading}
+            >
+              {isGuestLoginLoading ? (
+                <LoadingOutlined />
+              ) : (
+                "Continue as a guest"
+              )}
             </button>
           </div>
         </form>
 
         <p className="auth-form__link">
-          Already have an account?
+          Already have an account?{" "}
           <Link to={ROUTES.SIGNIN}>Sign in instead</Link>
         </p>
       </div>

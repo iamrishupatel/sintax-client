@@ -135,8 +135,10 @@
     font-family: $headingFont;
     border-radius: 0.4rem;
     &:disabled {
-      cursor: default;
-      background-color: lighten($color: $accentColor, $amount: 10);
+      cursor: not-allowed;
+      background-color: $gray-500;
+      pointer-events: none;
+      color: $gray-900;
     }
     &:hover {
       box-shadow: 0px 2px 6px $accentColor;
@@ -145,31 +147,50 @@
       box-shadow: 0px 2px 6px $accentColor;
     }
   }
+  button.gray {
+    background-color: $gray-900;
+    color: $white;
+    &:hover {
+      box-shadow: 0px 2px 6px $gray-900;
+    }
+    &:focus {
+      box-shadow: 0px 2px 6px $gray-900;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $gray-500;
+      pointer-events: none;
+      color: $gray-900;
+    }
+  }
 }
 
 .auth-form {
-  .divider {
+  .form-field-divider {
     position: relative;
     font-size: 0.9rem;
     color: $gray-900;
-    margin: 1rem 0;
-    &::before {
-      position: absolute;
-      content: "";
-      height: 1px;
-      width: 8rem;
-      background-color: $gray-500;
-      top: 50%;
-      right: 2rem;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      height: 1px;
-      width: 8rem;
-      background-color: $gray-500;
-      top: 50%;
-      left: 2rem;
+    margin: 0;
+    text-align: center;
+    span {
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 42%;
+        background-color: $gray-900;
+        top: 50%;
+        left: 0rem;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 42%;
+        background-color: $gray-900;
+        top: 50%;
+        right: 0rem;
+      }
     }
   }
 }
