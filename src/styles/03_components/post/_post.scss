@@ -51,6 +51,7 @@
   margin-right: 1rem;
 }
 .post__content {
+  word-wrap: break-word;
   margin: 1rem 0;
   cursor: pointer;
   @include mobile {
@@ -157,30 +158,3 @@
   align-items: center;
   margin-top: 2rem;
 }
-
-// // EXTRA FOR SEE MORE IN POST
-// .text {
-//   position: relative;
-//   font-size: 14px;
-//   color: black;
-//   font-family: sans-serif;
-//   width: 250px; /* Could be anything you like. */
-// }
-
-// .text-concat {
-//   position: relative;
-//   display: inline-block;
-//   word-wrap: break-word;
-//   overflow: hidden;
-//   max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
-//   line-height: 1.2em;
-//   text-align: justify;
-// }
-
-// .text.ellipsis::after {
-//   content: "...";
-//   position: absolute;
-//   right: -12px;
-//   bottom: 5px;
-// }
-
