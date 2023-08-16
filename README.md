@@ -2,11 +2,11 @@
 
 [![SC2 Video](https://res.cloudinary.com/dvhtmxijl/image/upload/v1643431571/sintax/assets/Frame_1_qqnj7c.png)](https://youtu.be/SeYzVu_Qvn4)
 
-[Sintax](https://sintax.rishupatel.in) is a MERN stack social media web application inspired from the traditional social media platforms.
+[Sintax](https://sintax.rlabs.dev) is a MERN stack social media web application inspired from the traditional social media platforms.
 
 ## Useful Links
 
-- [Preview App](https://sintax.rishupatel.in)
+- [Preview App](https://sintax.rlabs.dev)
 - [Backend Codebase](https://github.com/iamrishupatel/sintax-backend)
 - [YouTube Demo](https://youtu.be/SeYzVu_Qvn4)
 - Share your feedback on [twitter](https://twitter.com/iamrishupatel)
